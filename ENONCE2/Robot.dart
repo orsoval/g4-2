@@ -55,42 +55,49 @@ class Robot {
         "Bonjour je m'appelle ${this.nom}. J'ai ${this.vie} points de vie et je me déplace à ${this.vitesse} cases par seconde. Je suis à la case de coordonnées (${this.x};${this.y}) ");
   }
 
-  String seDeplacerVers(String direction) {
+  int seDeplacerVers(String direction) {
+    int nombre2pas = 1;
     switch (direction) {
       case "haut":
         {
-          this.y++;
-          return "haut";
+          this.y = this.y + nombre2pas;
+          return this.y;
         }
       case "bas":
         {
-          this.y--;
-          return "gauche";
+          this.y = this.y - nombre2pas;
+          return this.y;
         }
       case "gauche":
         {
-          this.x--;
-          return "gauche";
+          this.x = this.x - nombre2pas;
+          return this.x;
         }
       case "droite":
         {
-          this.x++;
-          return "bas";
+          this.x = this.x + nombre2pas;
+          return this.x;
         }
       default:
         {
-          return "";
+          return 0;
         }
     }
   }
 
   void seDeplacerAleatoirement(int nombreDeCoup) {
-    int cases = 3;
-    var randomGenerator = Random();
-    var randInt = randomGenerator.nextInt(cases);
-    for (var i = 0; i < nombreDeCoup; i++) {
-      randInt;
-      print("Une fois vers le ${seDeplacerVers(" ")} vers le $randInt");
-    }
+    // int cases = 3;
+    // var randomGenerator = Random();
+    // var randt = randomGenerator.nextInt(cases);
+    // for (var i = 0; i < nombreDeCoup; i++) {
+    //   randt;
+    //   if (randt == 1) {
+    //     print("haut");
+    //   } else if (randt == 2 || randt == 3) {
+    //     print("bas");
+    //   } else if (randt == 3) {
+    //     print("gauche");
+    //   }
+    // }
   }
 }
