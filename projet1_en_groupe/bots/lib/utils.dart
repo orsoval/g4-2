@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'dart:math';
-
 import 'classe_bot.dart';
 import 'classes_player.dart';
 

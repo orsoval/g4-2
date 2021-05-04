@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:robots/classe_bot.dart';
 import 'package:robots/classes_player.dart';
 import 'package:robots/utils.dart';
