@@ -8,10 +8,10 @@ void main(List<String> arguments) {
   // creation d'objet de type player
   var player1 = Player('', 1, 100);
 
-  print('entrer votre pseudo : ');
+  print('Entrer votre pseudo : ');
   var pseudo = stdin.readLineSync();
 
-  // recuperer le pseudo demander dans l'objet player1
+  // Recuperer le pseudo demander dans l'objet player1
   player1.pseudo = pseudo;
 
   do {
@@ -20,8 +20,8 @@ void main(List<String> arguments) {
 
     switch (choix) {
       case 0:
-        print('${player1.pseudo} ATTAQUE EN PREMIER');
-        print('----$pseudo APPUIYER SUR ENTRER POUR LANCER LES DÉS----');
+        print('${player1.pseudo} Attaque en premier');
+        print('----$pseudo Appuyer sur ENTRER pour lancer les dés----');
         stdin.readLineSync();
         attaquePlayerVersBot(player1, bot);
         infoBot(bot);
@@ -30,7 +30,7 @@ void main(List<String> arguments) {
         // Afficher les informations du player1
         break;
       default:
-        print('\nBOT ATTAQUE EN PREMIER\n');
+        print('Bot attaque en premier');
         attaqueBotVersPlayer(bot, player1);
         infoPlayer(player1);
         attaquePlayerVersBot(player1, bot);
@@ -44,7 +44,7 @@ void main(List<String> arguments) {
     sans qu'on demande d'appuiyer sur enter, ce n'est que lorsque la variable choix tomberas sur 0 qu'on demandera au player d'appuiyer sur entrer 
     */
 
-    print('FIN DU TOUR $i');
+    print('Fin du tour $i');
     i++;
 
     if (player1.health <= 0 || bot.health <= 0) {
@@ -56,11 +56,11 @@ void main(List<String> arguments) {
   } while (run);
 
   if (player1.health > bot.health) {
-    print('VOUS AVEZ GAGNEZ LA PARTIE!');
+    print('Vous avez gagné la partie!');
   } else if (player1.health < bot.health) {
-    print('VOUS AVEZ PERDU LA PARTIE!');
+    print('Vous avez perdu la partie!');
   } else {
-    print('match null');
+    print('Match null');
   }
 }
 
